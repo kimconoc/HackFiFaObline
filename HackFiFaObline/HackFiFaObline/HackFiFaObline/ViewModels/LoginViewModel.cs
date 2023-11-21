@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HackFiFaObline.Views;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
@@ -27,12 +28,15 @@ namespace HackFiFaObline.ViewModels
             get { return _codeActive; }
             set { SetProperty(ref _codeActive, value); }
         }
-        private void ExecuteLoginCommand()
+        private async void ExecuteLoginCommand()
         {
-            if(Account.ToLower() == "ducpv" && CodeActive == "123")
-            {
-
-            }    
+            await Application.Current.MainPage.Navigation.PushAsync(new HackFiFaPage());
+            //if (Account.ToLower() == "ducpv" && CodeActive == "123")
+            //{
+            //    await Application.Current.MainPage.Navigation.PushAsync(new HackFiFaPage());
+            //    //var pageIndex = Application.Current.MainPage.Navigation.NavigationStack.Count;
+            //    //Application.Current.MainPage.Navigation.RemovePage(Application.Current.MainPage.Navigation.NavigationStack[Application.Current.MainPage.Navigation.NavigationStack.Count - pageIndex]);
+            //}    
         }
     }
 }
