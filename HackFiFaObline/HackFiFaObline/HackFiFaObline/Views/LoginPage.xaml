@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HackFiFaObline.Views.LoginPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White"
+                     Padding="10">
+            <Image Aspect="Fill"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="iconhackfifa.png" />
+
+            <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label TextColor="Black"
+                       Text="Tài khoản"
+                       VerticalOptions="CenterAndExpand" />
+                <Entry Placeholder="Nhập tài khoản"
+                       Text="{Binding Account}"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Column="1" />
+            </Grid>
+
+            <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label TextColor="Black"
+                       Text="Mã kích hoạt"
+                       VerticalOptions="CenterAndExpand" />
+                <StackLayout Grid.Column="1"
+                             Orientation="Horizontal">
+                    <Entry Placeholder="Nhập mã kích hoạt"
+                           Text="{Binding CodeActive}"
+                           VerticalOptions="CenterAndExpand"
+                           IsPassword="True"
+                           x:Name="passwordEntry" />
+
+                    <Frame Padding="0"
+                           IsClippedToBounds="True"
+                           HasShadow="False"
+                           CornerRadius="0">
+                        <Image Source="iconhackfifa.png"
+                               WidthRequest="20"
+                               HeightRequest="20"
+                               VerticalOptions="Center"
+                               Margin="0,0,0,0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TogglePasswordVisibility" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+                </StackLayout>
+
+
+            </Grid>
+            <Grid VerticalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button BackgroundColor="#e3165b"
+                        TextColor="White"
+                        CornerRadius="5"
+                        Text="Đăng nhập"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="150"
+                        Command="{Binding Login}" />
+                <Button BackgroundColor="#e3165b"
+                        TextColor="White"
+                        CornerRadius="5"
+                        Text="Đăng ký"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="150"
+                        Grid.Column="1" />
+            </Grid>
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

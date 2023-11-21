@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HackFiFaObline.ViewModels;
+using HackFiFaObline.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +11,7 @@ namespace HackFiFaObline
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

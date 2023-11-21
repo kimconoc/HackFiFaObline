@@ -133,4 +133,13 @@
       <Name>HackFiFaObline</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconhackfifa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconhackfifa%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconhackfifa%403x.png" />
+  </ItemGroup>
 </Project>
