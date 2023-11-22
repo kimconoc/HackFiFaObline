@@ -1,10 +1,11 @@
 ﻿using HackFiFaObline.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,6 +19,14 @@ namespace HackFiFaObline.Views
 			InitializeComponent ();
             //Binding dữ liệu lên BaseViewModel
             BindingContext = new LoginViewModel();
+        }
+
+        private async void OpenWebsite_Click(object sender, EventArgs e)
+        {
+            // Đường dẫn đến trang web bạn muốn mở
+            string url = "https://www.dangkykeys.site/";
+            // Mở trình duyệt mặc định với liên kết đến trang web
+            await Browser.OpenAsync(url);
         }
     }
 }

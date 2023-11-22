@@ -61,6 +61,7 @@
                             Text="Đăng ký"
                             VerticalOptions="CenterAndExpand"
                             WidthRequest="150"
+                            Clicked="OpenWebsite_Click"
                             Grid.Column="1" />
                 </Grid>
 
@@ -77,6 +78,22 @@
                                    WidthRequest="30"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center" />
+            </ContentView>
+
+            <ContentView RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                         IsVisible="{Binding IsShowNotification}">
+
+                <StackLayout VerticalOptions="End"
+                             HorizontalOptions="Center"
+                             Margin="10">
+                    <Frame CornerRadius="5"
+                           Padding="10"
+                           BackgroundColor="#EEEEEE">
+                        <Label TextColor="Black"
+                               Text="{Binding TextNotification}" />
+                    </Frame>
+                </StackLayout>
             </ContentView>
 
         </RelativeLayout>

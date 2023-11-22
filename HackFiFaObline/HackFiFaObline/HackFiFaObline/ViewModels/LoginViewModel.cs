@@ -29,21 +29,42 @@ namespace HackFiFaObline.ViewModels
             get { return _codeActive; }
             set { SetProperty(ref _codeActive, value); }
         }
+        private bool _isShowNotification = false;
+        public bool IsShowNotification
+        {
+            get { return _isShowNotification; }
+            set { SetProperty(ref _isShowNotification, value); }
+        }
+        private string _textNotification = string.Empty;
+        public string TextNotification
+        {
+            get { return _textNotification; }
+            set { SetProperty(ref _textNotification, value); }
+        }
         private async void ExecuteLoginCommand()
         {
             IsBusy = true;
-            await Task.Delay(3000);
+            await Task.Delay(500);
             IsBusy = false;
-            if (Account.ToLower() == "ducpv" && CodeActive == "123")
+            IsShowNotification = true;
+            if (!string.IsNullOrEmpty(Account) && !string.IsNullOrEmpty(CodeActive))
             {
-
+                TextNotification = "Vui lòng điền đầy đủ thông tin!";
+            }
+            else
+            {
+                TextNotification = "Mã kích hoạt sai!";
             }    
-            //if (Account.ToLower() == "ducpv" && CodeActive == "123")
-            //{
-            //    await Application.Current.MainPage.Navigation.PushAsync(new HackFiFaPage());
-            //    //var pageIndex = Application.Current.MainPage.Navigation.NavigationStack.Count;
-            //    //Application.Current.MainPage.Navigation.RemovePage(Application.Current.MainPage.Navigation.NavigationStack[Application.Current.MainPage.Navigation.NavigationStack.Count - pageIndex]);
-            //}    
+            await HideNotificationAfterDelay();
+               
         }
+        private async Task HideNotificationAfterDelay()
+        {
+            // Đợi 3 giây (3000 milliseconds)
+            await Task.Delay(3000);
+            // Sau đó, đặt giá trị của IsShowNotification thành false
+            IsShowNotification = false;
+        }
+
     }
 }
