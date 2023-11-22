@@ -134,12 +134,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\iconhackfifa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\iconhackfifa%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\iconhackfifa%403x.png" />
+    <BundleResource Include="Resources\hackfifa.png" />
   </ItemGroup>
 </Project>

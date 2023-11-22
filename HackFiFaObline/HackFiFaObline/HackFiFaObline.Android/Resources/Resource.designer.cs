@@ -16531,29 +16531,29 @@ namespace HackFiFaObline.Droid
 			// aapt resource value: 0x7F070063
 			public const int design_snackbar_background = 2131165283;
 			
-			// aapt resource value: 0x7F07006B
-			public const int iconhackfifa = 2131165291;
-			
 			// aapt resource value: 0x7F070064
-			public const int ic_arrow_down_24dp = 2131165284;
+			public const int hackfifa = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int ic_clock_black_24dp = 2131165285;
+			public const int ic_arrow_down_24dp = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int ic_keyboard_black_24dp = 2131165286;
+			public const int ic_clock_black_24dp = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int ic_mtrl_checked_circle = 2131165287;
+			public const int ic_keyboard_black_24dp = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int ic_mtrl_chip_checked_black = 2131165288;
+			public const int ic_mtrl_checked_circle = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int ic_mtrl_chip_checked_circle = 2131165289;
+			public const int ic_mtrl_chip_checked_black = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int ic_mtrl_chip_close_circle = 2131165290;
+			public const int ic_mtrl_chip_checked_circle = 2131165290;
+			
+			// aapt resource value: 0x7F07006B
+			public const int ic_mtrl_chip_close_circle = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
 			public const int material_cursor_drawable = 2131165292;
@@ -18786,14 +18786,11 @@ namespace HackFiFaObline.Droid
 			// aapt resource value: 0x7F0C0000
 			public const int icon = 2131492864;
 			
-			// aapt resource value: 0x7F0C0002
-			public const int iconhackfifa = 2131492866;
-			
 			// aapt resource value: 0x7F0C0001
 			public const int icon_round = 2131492865;
 			
-			// aapt resource value: 0x7F0C0003
-			public const int launcher_foreground = 2131492867;
+			// aapt resource value: 0x7F0C0002
+			public const int launcher_foreground = 2131492866;
 			
 			static Mipmap()
 			{

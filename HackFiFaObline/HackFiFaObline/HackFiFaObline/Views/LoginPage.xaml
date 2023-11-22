@@ -12,7 +12,7 @@
                 <Image Aspect="Fill"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
-                       Source="iconhackfifa.png" />
+                       Source="hackfifa.png" />
 
                 <Grid Padding="10">
                     <Grid.ColumnDefinitions>
@@ -41,39 +41,6 @@
                            VerticalOptions="CenterAndExpand"
                            Grid.Column="1" />
                 </Grid>
-
-                <!--<Grid Padding="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label TextColor="Black"
-                       Text="Mã kích hoạt"
-                       VerticalOptions="CenterAndExpand" />
-                <StackLayout Grid.Column="1"
-                             Orientation="Horizontal">
-                    <Entry Placeholder="Nhập mã kích hoạt"
-                           Text="{Binding CodeActive}"
-                           VerticalOptions="CenterAndExpand"
-                           IsPassword="True"
-                           x:Name="passwordEntry" />
-
-                    <Frame Padding="0"
-                           IsClippedToBounds="True"
-                           HasShadow="False"
-                           CornerRadius="0">
-                        <Image Source="iconhackfifa.png"
-                               WidthRequest="20"
-                               HeightRequest="20"
-                               VerticalOptions="Center"
-                               Margin="0,0,0,0">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TogglePasswordVisibility" />
-                            </Image.GestureRecognizers>
-                        </Image>
-                    </Frame>
-                </StackLayout>
-            </Grid>-->
 
                 <Grid VerticalOptions="CenterAndExpand">
                     <Grid.ColumnDefinitions>
