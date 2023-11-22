@@ -19,12 +19,12 @@ namespace HackFiFaObline.Views
             //Binding dữ liệu lên BaseViewModel
             BindingContext = new LoginViewModel();
         }
-        private void TogglePasswordVisibility(object sender, EventArgs e)
-        {
-            if (passwordEntry != null)
-            {
-                passwordEntry.IsPassword = !passwordEntry.IsPassword;
-            }
-        }
+        //private void TogglePasswordVisibility(object sender, EventArgs e)
+        //{
+        //    if (passwordEntry != null)
+        //    {
+        //        passwordEntry.IsPassword = !passwordEntry.IsPassword;
+        //    }
+        //}
     }
 }

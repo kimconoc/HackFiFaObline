@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -30,7 +31,13 @@ namespace HackFiFaObline.ViewModels
         }
         private async void ExecuteLoginCommand()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new HackFiFaPage());
+            IsBusy = true;
+            await Task.Delay(3000);
+            IsBusy = false;
+            if (Account.ToLower() == "ducpv" && CodeActive == "123")
+            {
+
+            }    
             //if (Account.ToLower() == "ducpv" && CodeActive == "123")
             //{
             //    await Application.Current.MainPage.Navigation.PushAsync(new HackFiFaPage());
