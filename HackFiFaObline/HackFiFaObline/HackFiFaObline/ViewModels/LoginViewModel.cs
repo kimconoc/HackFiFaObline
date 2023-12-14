@@ -13,7 +13,7 @@ namespace HackFiFaObline.ViewModels
         public ICommand Login { get; private set; }
         public LoginViewModel()
         {
-            Title = "Hack FIFA Online 4 ProV1.2";
+            Title = "Hack Trên Điện Thoại ProVIP";
             Login = new Command(ExecuteLoginCommand);
         }
 
@@ -49,11 +49,11 @@ namespace HackFiFaObline.ViewModels
             IsShowNotification = true;
             if (!string.IsNullOrEmpty(Account) && !string.IsNullOrEmpty(CodeActive))
             {
-                TextNotification = "Vui lòng điền đầy đủ thông tin!";
+                TextNotification = "Mã kích hoạt sai vui lòng thử lại!";
             }
             else
             {
-                TextNotification = "Mã kích hoạt sai!";
+                TextNotification = "Vui lòng điền đầy đủ thông tin!";
             }    
             await HideNotificationAfterDelay();
                
