@@ -47,7 +47,19 @@ namespace HackFiFaObline.ViewModels
             await Task.Delay(500);
             IsBusy = false;
             IsShowNotification = true;
-            if (!string.IsNullOrEmpty(Account) && !string.IsNullOrEmpty(CodeActive))
+
+            if(!string.IsNullOrEmpty(Account) && (Account.ToUpper() == "BK21942") || Account.ToUpper() == "BK98421")
+            {
+                if (Account.ToUpper() == "BK21942")
+                {
+                    TextNotification = "Bản hack đã được kích hoạt. Liên hệ admin để được cấp bản quyền hack";
+                }
+                else if (Account.ToUpper() == "BK98421")
+                {
+                    TextNotification = "Bản hack đã được kích hoạt. Hack đang chạy!";
+                }
+            }    
+            else if (!string.IsNullOrEmpty(Account) && !string.IsNullOrEmpty(CodeActive))
             {
                 TextNotification = "Mã kích hoạt sai vui lòng thử lại!";
             }
@@ -55,6 +67,7 @@ namespace HackFiFaObline.ViewModels
             {
                 TextNotification = "Vui lòng điền đầy đủ thông tin!";
             }    
+
             await HideNotificationAfterDelay();
                
         }
