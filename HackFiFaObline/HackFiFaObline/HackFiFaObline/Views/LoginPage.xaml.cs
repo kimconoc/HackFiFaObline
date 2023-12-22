@@ -24,7 +24,7 @@ namespace HackFiFaObline.Views
         private async void OpenWebsite_Click(object sender, EventArgs e)
         {
             // Đường dẫn đến trang web bạn muốn mở
-            string url = "https://www.dangkykeys.site/";
+            string url = "http://kichhoatkey.top/";
             // Mở trình duyệt mặc định với liên kết đến trang web
             await Browser.OpenAsync(url);
         }
