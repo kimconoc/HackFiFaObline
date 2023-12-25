@@ -37,6 +37,7 @@
                            Text="Mã kích hoạt"
                            VerticalOptions="CenterAndExpand" />
                     <Entry Placeholder="Nhập mã kích hoạt"
+                           IsPassword="True"
                            Text="{Binding CodeActive}"
                            VerticalOptions="CenterAndExpand"
                            Grid.Column="1" />
